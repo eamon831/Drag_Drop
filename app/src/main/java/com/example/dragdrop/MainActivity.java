@@ -32,7 +32,7 @@ import javax.security.auth.callback.Callback;
 
 public class MainActivity extends AppCompatActivity {
     RecyclerView list;
-    TextView droped, mTextView, mText;
+    TextView droped,droped2, mTextView, mText;
     List<String> wordList= new ArrayList<>();
     List<String> textview= new ArrayList<>();
     adapter a;
@@ -45,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
         list=findViewById(R.id.list);
         list.setLayoutManager(new LinearLayoutManager(this));
         droped=findViewById(R.id.textView);
+        droped2=findViewById(R.id.textView2);
+        droped2.setOnDragListener(new MyDragListener());
         droped.setOnDragListener(new MyDragListener());
 
 
